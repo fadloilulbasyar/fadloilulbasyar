@@ -3,88 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fadloilul Basyar | Portofolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Portofolio | Muhammad Fadloilul Basyar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        scroll-behavior: smooth;
+        :root {
+            --primary-color: #2c3e50; /* Biru Gelap Industri */
+            --accent-color: #f39c12;  /* Oranye Safety */
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        header {
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), 
+                        url('https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&q=80'); /* Background industri */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid var(--accent-color);
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: -50px auto 50px;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-top: 30px;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .info-item {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            border-bottom: 3px solid #eee;
+        }
+
+        .info-item i {
+            color: var(--accent-color);
+            margin-right: 10px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: #e67e22;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 20px; margin-top: -30px; }
+        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body>
 
-    <!-- Header -->
-    <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-slate-200">
-        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold tracking-tighter text-indigo-600">FB.</span>
-            <div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-widest">
-                <a href="#home" class="hover:text-indigo-600 transition">Beranda</a>
-                <a href="#proyek" class="hover:text-indigo-600 transition">Proyek</a>
-                <a href="#kontak" class="hover:text-indigo-600 transition">Kontak</a>
-            </div>
-        </div>
-    </nav>
+<header>
+    <img src="image_e0e34e.jpg" alt="Muhammad Fadloilul Basyar" class="profile-img">
+    <h1>Muhammad Fadloilul Basyar</h1>
+    <p>NRP: 0824040016 | Industrial Specialist</p>
+</header>
 
-    <!-- Hero Section -->
-    <section id="home" class="pt-40 pb-20 px-6">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
-            <div class="flex-1 text-center md:text-left">
-                <h2 class="text-indigo-600 font-mono mb-2">Halo, nama saya</h2>
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 text-slate-900">Fadloilul Basyar.</h1>
-                <p class="text-lg text-slate-600 mb-8 max-w-lg">
-                    Saya adalah seorang kreatif yang fokus pada pembangunan solusi digital yang fungsional dan estetis. Mari berkolaborasi untuk menciptakan sesuatu yang luar biasa.
-                </p>
-                <div class="flex justify-center md:justify-start gap-4">
-                    <a href="#proyek" class="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">Lihat Karya</a>
-                    <a href="#kontak" class="border border-slate-300 px-8 py-3 rounded-lg font-semibold hover:bg-slate-100 transition">Hubungi Saya</a>
-                </div>
-            </div>
-            <div class="flex-1 flex justify-center">
-                <div class="w-64 h-64 bg-indigo-100 rounded-2xl rotate-3 flex items-center justify-center border-2 border-indigo-200 shadow-xl overflow-hidden">
-                   <!-- Ganti link gambar di bawah dengan foto Anda -->
-                   <img src="https://ui-avatars.com/api/?name=Fadloilul+Basyar&background=6366f1&color=fff&size=512" alt="Fadloilul Basyar">
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="container">
+    <h2 class="section-title">Tentang Saya</h2>
+    <p>
+        Halo! Saya Muhammad Fadloilul Basyar, seorang profesional muda yang berdedikasi tinggi di sektor industri. 
+        Lahir di Gresik, saya memiliki minat besar dalam operasional lapangan dan manajemen keselamatan kerja (K3). 
+        Saya percaya bahwa disiplin fisik melalui olahraga dan ketelitian teknis adalah kunci kesuksesan di lingkungan kerja yang dinamis.
+    </p>
 
-    <!-- Project Section -->
-    <section id="proyek" class="py-24 bg-white px-6">
-        <div class="max-w-5xl mx-auto">
-            <div class="flex items-center gap-4 mb-12">
-                <h3 class="text-3xl font-bold">Proyek Terpilih</h3>
-                <div class="h-[1px] flex-1 bg-slate-200"></div>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Project 1 -->
-                <div class="group">
-                    <div class="aspect-video bg-slate-100 rounded-xl mb-4 overflow-hidden border border-slate-200">
-                        <div class="w-full h-full bg-indigo-50 group-hover:scale-105 transition duration-500 flex items-center justify-center">
-                             <span class="text-slate-400 font-mono italic">Project Preview 1</span>
-                        </div>
-                    </div>
-                    <h4 class="text-xl font-bold mb-1">Pengembangan Web Responsif</h4>
-                    <p class="text-slate-600 text-sm">Tech: HTML, Tailwind CSS, JavaScript</p>
-                </div>
-            </div>
+    <h2 class="section-title">Biodata Lengkap</h2>
+    <div class="info-grid">
+        <div class="info-item">
+            <i class="fas fa-calendar-alt"></i>
+            <strong>TTL:</strong> Gresik, 1 Februari 2006
         </div>
-    </section>
+        <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <strong>Alamat:</strong> Jl. Sunan Gunung Jati, Gresik
+        </div>
+        <div class="info-item">
+            <i class="fas fa-running"></i>
+            <strong>Hobi:</strong> Olahraga
+        </div>
+        <div class="info-item">
+            <i class="fas fa-id-card"></i>
+            <strong>NRP:</strong> 0824040016
+        </div>
+    </div>
 
-    <!-- Footer -->
-    <footer id="kontak" class="py-20 bg-slate-50 border-t border-slate-200">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-6">Tertarik Bekerja Sama?</h2>
-            <p class="text-slate-600 mb-10 max-w-md mx-auto">Saya saat ini tersedia untuk proyek freelance atau peluang kerja full-time.</p>
-            <a href="mailto:halo@fadloilul.com" class="text-2xl font-bold text-indigo-600 hover:underline">halo@fadloilul.com</a>
-            
-            <div class="mt-16 flex justify-center gap-8 text-slate-400">
-                <a href="#" class="hover:text-indigo-600 transition tracking-tighter font-bold">GITHUB</a>
-                <a href="#" class="hover:text-indigo-600 transition tracking-tighter font-bold">LINKEDIN</a>
-                <a href="#" class="hover:text-indigo-600 transition tracking-tighter font-bold">INSTAGRAM</a>
-            </div>
-            <p class="mt-12 text-xs text-slate-400 uppercase tracking-widest">&copy; 2026 Fadloilul Basyar. Tersemat dengan Kode.</p>
-        </div>
-    </footer>
+    <h2 class="section-title">Hubungi Saya</h2>
+    <p>Tertarik untuk bekerja sama atau ingin tahu lebih lanjut tentang profil saya?</p>
+    <a href="https://wa.me/6281554191728" class="contact-btn"><i class="fab fa-whatsapp"></i> Chat via WhatsApp</a>
+    <a href="https://instagram.com/f_basyarr" class="contact-btn" style="background-color: #833ab4;"><i class="fab fa-instagram"></i> Instagram</a>
+</div>
+
+<div class="footer">
+    &copy; 2024 Muhammad Fadloilul Basyar. All Rights Reserved.
+</div>
 
 </body>
 </html>
